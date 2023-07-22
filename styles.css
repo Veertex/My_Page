@@ -1,0 +1,380 @@
+/*GLOBAL*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap");
+@import url("./normalize.css");
+* {
+  font-family: "Roboto Condensed", sans-serif;
+  text-decoration: none;
+  padding: 0px;
+  margin: 0px;
+}
+/*MODO PANTALLA MOVIL*/
+@media (max-width: 650px) {
+  * {
+    font-family: "Roboto Condensed", sans-serif;
+    text-decoration: none;
+    padding: 0px;
+    margin: 0px;
+  }
+  /*HEADER*/
+  header {
+    border: 8px solid darkblue;
+    justify-content: space-between;
+    flex-direction: row;
+    display: flex;
+  }
+  header * {
+    flex-direction: column;
+    display: flex;
+  }
+  header img {
+    border: 8px solid darkorange;
+    height: 128px;
+    width: 384px;
+  }
+  header nav {
+    border: 8px solid darkorange;
+    align-items: center;
+    position: relative;
+    width: 128px;
+  }
+  header li {
+    display: none;
+  }
+  header nav:hover > li {
+    border: 8px solid darkorange;
+    background-color: white;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    display: flex;
+    width: 100%;
+    margin: 0;
+    top: 100%;
+  }
+  header nav li ul {
+    border: 8px solid brown;
+    justify-content: center;
+    align-items: center;
+    height: 48px;
+    width: 100%;
+  }
+  header nav li ul:hover {
+    border: 8px solid grey;
+  }
+  /*BODY*/
+  body {
+    margin-right: auto;
+    margin-left: auto;
+  }
+  body * {
+    margin: 10px;
+  }
+  /*MAIN*/
+  main {
+    border: 8px solid darkblue;
+  }
+  /*MAIN ARTICLE*/
+  main article {
+    border: 8px solid darkorange;
+    justify-content: center;
+    flex-wrap: wrap;
+    display: flex;
+  }
+  main article img {
+    border: 8px solid brown;
+    overflow: visible;
+    height: 96px;
+    width: 192px;
+  }
+  main article div {
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+  }
+  main article div p {
+    border: 8px solid brown;
+    text-align: justify;
+    padding: 10px;
+  }
+  main article div nav {
+    justify-content: space-around;
+    display: flex;
+  }
+  main article div nav img {
+    border: 8px solid brown;
+    height: 32px;
+    width: 32px;
+  }
+  main article div nav img:hover {
+    border: 8px solid grey;
+  }
+  /*FOOTER*/
+  footer {
+    border: 8px solid darkblue;
+    height: 128px;
+  }
+  /*------------------------------------*/
+  /*ANIMATION TEST*/
+  /*------------------------------------*/
+  main div {
+    border: 8px solid darkorange;
+    height: 256px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    display: flex;
+  }
+  main div img {
+    border: 8px solid brown;
+    height: 32px;
+    width: 32px;
+  }
+  main div div:first-of-type {
+    animation: elementFlow1 3s linear infinite;
+    justify-content: space-between;
+    border: 8px solid transparent;
+    flex-direction: row;
+    position: absolute;
+    display: flex;
+    width: 222px;
+    height: 0;
+  }
+  main div div:first-of-type div {
+    animation: elementFlow1 3s linear infinite;
+    outline: 8px solid purple;
+    position: relative;
+    border: none;
+    height: 32px;
+    width: 32px;
+    margin: 0;
+  }
+  main div div:first-of-type div img {
+    animation: elementFlow2 3s linear infinite;
+    outline: 8px solid brown;
+    height: 32px;
+    border: none;
+    width: 32px;
+    margin: 0;
+  }
+  main div div:last-of-type {
+    animation: elementFlow1 3s linear infinite;
+    justify-content: space-between;
+    border: 8px solid transparent;
+    flex-direction: column;
+    position: absolute;
+    display: flex;
+    height: 222px;
+    width: 0;
+  }
+  main div div:last-of-type div {
+    animation: elementFlow1 3s linear infinite;
+    outline: 8px solid purple;
+    position: relative;
+    border: none;
+    height: 32px;
+    width: 32px;
+    margin: 0;
+  }
+  main div div:last-of-type div img {
+    animation: elementFlow2 3s linear infinite;
+    outline: 8px solid brown;
+    height: 32px;
+    border: none;
+    width: 32px;
+    margin: 0;
+  }
+  @keyframes elementFlow1 {
+    from {
+      transform: rotate(360deg);
+    }
+    to {
+      transform: rotate(0deg);
+    }
+  }
+  @keyframes elementFlow2 {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(720deg);
+    }
+  }
+  /*------------------------------------*/
+  /*                                    */
+  /*------------------------------------*/
+}
+/*MODO PANTALLA ESCRITORIO*/
+@media (min-width: 650px) {
+  /*HEADER*/
+  header {
+    border: 8px solid darkblue;
+  }
+  header * {
+    flex-direction: row;
+    display: flex;
+  }
+  header img {
+    border: 8px solid darkorange;
+    margin-right: auto;
+    margin-left: auto;
+    height: 128px;
+    width: 384px;
+  }
+  header nav {
+    border: 8px solid darkorange;
+    justify-content: space-around;
+  }
+  header li {
+    width: 100%;
+  }
+  header li ul {
+    border: 8px solid brown;
+    justify-content: center;
+    align-items: center;
+    height: 48px;
+    width: 100%;
+  }
+  header li ul:hover {
+    border: 8px solid grey;
+  }
+  /*BODY*/
+  body {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 768px;
+  }
+  body * {
+    margin: 10px;
+  }
+  /*MAIN*/
+  main {
+    border: 8px solid darkblue;
+  }
+  /*MAIN ARTICLE*/
+  main article {
+    border: 8px solid darkorange;
+    display: flex;
+  }
+  main article img {
+    border: 8px solid brown;
+    overflow: visible;
+    height: 96px;
+    width: 192px;
+  }
+  main article div {
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+  }
+  main article div p {
+    border: 8px solid brown;
+    text-align: justify;
+    padding: 10px;
+  }
+  main article div nav {
+    justify-content: end;
+    display: flex;
+  }
+  main article div nav img {
+    border: 8px solid brown;
+    height: 32px;
+    width: 32px;
+  }
+  main article div nav img:hover {
+    border: 8px solid grey;
+  }
+  /*FOOTER*/
+  footer {
+    border: 8px solid darkblue;
+    height: 128px;
+  }
+  /*------------------------------------*/
+  /*ANIMATION TEST*/
+  /*------------------------------------*/
+  main div {
+    border: 8px solid darkorange;
+    height: 256px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    display: flex;
+  }
+  main div img {
+    border: 8px solid brown;
+    height: 32px;
+    width: 32px;
+  }
+  main div div:first-of-type {
+    animation: elementFlow1 3s linear infinite;
+    justify-content: space-between;
+    border: 8px solid transparent;
+    flex-direction: row;
+    position: absolute;
+    display: flex;
+    width: 222px;
+    height: 0;
+  }
+  main div div:first-of-type div {
+    animation: elementFlow1 3s linear infinite;
+    outline: 8px solid purple;
+    position: relative;
+    border: none;
+    height: 32px;
+    width: 32px;
+    margin: 0;
+  }
+  main div div:first-of-type div img {
+    animation: elementFlow2 3s linear infinite;
+    outline: 8px solid brown;
+    height: 32px;
+    border: none;
+    width: 32px;
+    margin: 0;
+  }
+  main div div:last-of-type {
+    animation: elementFlow1 3s linear infinite;
+    justify-content: space-between;
+    border: 8px solid transparent;
+    flex-direction: column;
+    position: absolute;
+    display: flex;
+    height: 222px;
+    width: 0;
+  }
+  main div div:last-of-type div {
+    animation: elementFlow1 3s linear infinite;
+    outline: 8px solid purple;
+    position: relative;
+    border: none;
+    height: 32px;
+    width: 32px;
+    margin: 0;
+  }
+  main div div:last-of-type div img {
+    animation: elementFlow2 3s linear infinite;
+    outline: 8px solid brown;
+    height: 32px;
+    border: none;
+    width: 32px;
+    margin: 0;
+  }
+  @keyframes elementFlow1 {
+    from {
+      transform: rotate(360deg);
+    }
+    to {
+      transform: rotate(0deg);
+    }
+  }
+  @keyframes elementFlow2 {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(720deg);
+    }
+  }
+  /*------------------------------------*/
+  /*                                    */
+  /*------------------------------------*/
+}
